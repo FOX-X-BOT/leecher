@@ -145,12 +145,12 @@ def get_readable_message():
                 msg += f"\n⚡️ <b>Speed:</b> {download.speed()} | <b>ETA:</b> {download.eta()}"
                 try:
                     msg += f"\n📡 <b>Seeders:</b> {download.aria_download().num_seeders}" \
-                           f" | 🪙 <b>Peers:</b> {download.aria_download().connections}"
+                           f" |🪙 <b>Peers:</b> {download.aria_download().connections}"
                 except:
                     pass
                 try:
-                    msg += f"\n<b>Seeders:</b> {download.torrent_info().num_seeds}" \
-                           f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
+                    msg += f"\n📡 <b>Seeders:</b> {download.torrent_info().num_seeds}" \
+                           f" |🪙 <b>Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
                     pass
                 msg += f"\n<code>/{BotCommands.CancelMirror} {download.gid()}</code>"
@@ -183,8 +183,8 @@ def get_readable_message():
                     upspeed_bytes += float(spd.split('M')[0]) * 1048576
         dlspeed = get_readable_file_size(dlspeed_bytes)
         upspeed = get_readable_file_size(upspeed_bytes)
-        bmsg += f"\n📟 <b>RAM:</b> {virtual_memory().percent}% | 🌐 <b>UPTIME:</b> {currentTime}"
-        bmsg += f"\n<b>DL:</b> {dlspeed}/s 🔽 | <b>UL:</b> {upspeed}/s 🔼"
+        bmsg += f"\n\n📟 <b>RAM:</b> {virtual_memory().percent}% |🌐 <b>UPTIME:</b> {currentTime}"
+        bmsg += f"\n\n<b>DL:</b> {dlspeed}/s 🔽 | <b>UL:</b> {upspeed}/s 🔼"
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
             msg += f"📑 <b>Page:</b> {PAGE_NO}/{pages} | 🗓 <b>Tasks:</b> {tasks}\n"
             buttons = ButtonMaker()
