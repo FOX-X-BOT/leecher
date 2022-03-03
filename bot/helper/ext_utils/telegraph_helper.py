@@ -57,4 +57,4 @@ class TelegraphHelper:
 			return self.edit_page(path, title, content)
 
 
-telegraph=TelegraphHelper('Zeus-Mirror-Zone', 'Zeus-Leech-Zone')
+telegraph=TelegraphHelper('Zeus-Mirror-Zone', 'https://github.com/FOX-X-BOT/leecher')
